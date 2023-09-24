@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './components/home/home.component';
 import { HousingLocationComponent } from '../shared/components/housing-location/housing-location.component';
-import { DetailsComponent } from '../shared/details/details.component';
-
+import { DetailsComponent } from './components/details/details.component';
+import { AppRoutingModule } from '../app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,10 +14,12 @@ import { DetailsComponent } from '../shared/details/details.component';
     DetailsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   exports: [
-    HomeComponent
+    HomeComponent,
   ]
 })
 export class SharedModule { }
